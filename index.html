@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="SCSS/SCSS/style.css" />
+    <link rel="stylesheet" href="SCSS/SCSS/mobileStyle.css" />
+    <link rel="stylesheet" href="SCSS/SCSS/dropDown.css" />
+    <link rel="stylesheet" href="SCSS/SCSS/popup.css" />
+
+    <title>E-commerce product page</title>
+  </head>
+
+  <body>
+    <section id="blur">
+      <header>
+        <nav>
+          <!-- Mobile menu  -->
+          <div id="nav-mobile-container">
+            <div class="bg"></div>
+            <div class="button" tabindex="0">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </div>
+            <div id="nav-content" tabindex="0">
+              <ul id="mobile-list">
+                <li><a href="#0">Collections</a></li>
+                <li><a href="#0">Men</a></li>
+                <li><a href="#0">Women</a></li>
+                <li><a href="#0">About</a></li>
+                <li><a href="#0">Contact</a></li>
+                <li class="small">
+                  <a href="#0">Facebook</a><a href="#0">Instagram</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--End  Mobile menu  -->
+          <div class="logo">
+            <img src="images/logo.svg" alt="" />
+          </div>
+          <ul>
+            <li class="active"><a href="#Collections">Collections</a></li>
+            <li class=""><a href="#Men"> Men</a></li>
+            <li class=""><a href="#Women"> Women</a></li>
+            <li class=""><a href="#About"> About</a></li>
+            <li class=""><a href="#Contact"> Contact</a></li>
+            <div class="animation start-home"></div>
+          </ul>
+        </nav>
+        <div class="left-side">
+          <ul>
+            <li class="panier dropdown">
+              <span class="notification">0</span>
+              <button onclick="myFunction()" class="dropbtn">
+                <img class="dropbtn" src="images/icon-cart.svg" alt="" />
+              </button>
+
+              <div id="myDropdown" class="dropdown-content">
+                <div class="header-card-panier">
+                  <h4>Cart</h4>
+                </div>
+                <div class="empty show-empty">
+                  <h2>Your cart is empty</h2>
+                </div>
+                <div class="wrraper-cart hide-wrraper-cart">
+                  <div class="details">
+                    <div class="details-img">
+                      <div id="thumb-for-card">
+                        <img
+                          src="images/image-product-1-thumbnail.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+
+                    <div class="details-description">
+                      <span>Fall Limited Edition Sneakers</span>
+                      <div class="price-operation">
+                        <p class="opc">$<span class="article-price">0</span></p>
+                        <p class="opc">x</p>
+                        <p class="opc qteCart">0</p>
+                        <p style="font-weight: bold; padding-left: 2px">
+                          = $
+                          <span
+                            style="
+                              font-weight: bold;
+                              color: #000;
+                              padding-left: 2px;
+                            "
+                            class="final-price"
+                            >0</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="details-delete">
+                      <div id="trash">
+                        <img src="images/icon-delete.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="check-out">
+                    <button class="check-out-btn">Check Out</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><img class="avatar" src="images/image-avatar.png" alt="" /></li>
+          </ul>
+        </div>
+      </header>
+      <div class="container">
+        <div class="articles">
+          <div class="selected_one">
+            <img src="images/image-product-1.jpg" alt="" />
+          </div>
+
+          <div class="p-thumbnail">
+            <div
+              class="thumbnail-1"
+              onclick="changeIt('images/image-product-1.jpg')"
+            >
+              <img src="images/image-product-1.jpg" alt="" onclick="toggle()" />
+            </div>
+            <div
+              class="thumbnail-2"
+              onclick="changeIt('images/image-product-2.jpg')"
+            >
+              <img src="images/image-product-2.jpg" alt="" onclick="toggle()" />
+            </div>
+            <div
+              class="thumbnail-3"
+              onclick="changeIt('images/image-product-3.jpg')"
+            >
+              <img src="images/image-product-3.jpg" alt="" onclick="toggle()" />
+            </div>
+            <div
+              class="thumbnail-4"
+              onclick="changeIt('images/image-product-4.jpg')"
+            >
+              <img src="images/image-product-4.jpg" alt="" onclick="toggle()" />
+            </div>
+          </div>
+        </div>
+
+        <div class="Description">
+          <div class="Description-container">
+            <h6>Sneaker Company</h6>
+            <h1>Fall Limited Edition Sneakers</h1>
+
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+            <div class="price">
+              <ul>
+                <li>
+                  $<span class="prix-unitaire">125.02</span
+                  ><span class="reduction">50%</span>
+                </li>
+                <li class="real-price">$250.00</li>
+              </ul>
+            </div>
+            <div class="bottom">
+              <div class="qte">
+                <div class="btn-qte-container">
+                  <button class="minus" onclick="decreament()">-</button>
+                </div>
+
+                <div class="qte-nb">0</div>
+                <div class="btn-qte-container">
+                  <button class="plus" onclick="increament()">+</button>
+                </div>
+              </div>
+              <button class="buy" onclick="addToCartOperation()">
+                <span class="small-cart-btn"
+                  ><img src="images/icon-cart.svg" alt=""
+                /></span>
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Azeddine Blidi</a>.
+      </div>
+    </section>
+    <div class="pop-up" id="activate-pop-up">
+      <a class="closy" href="#" onclick="toggle()">X</a>
+      <div class="articles-pop-up">
+        <div class="selected_one-pop-up changed">
+          <img src="images/image-product-1.jpg" alt="" />
+          <div class="btn-pop-up-container">
+            <div class="pop-up-btn-prev">
+              <button>&#10148;</button>
+            </div>
+            <div class="pop-up-btn-next">
+              <button>&#10148;</button>
+            </div>
+          </div>
+        </div>
+        <div class="p-thumbnail-pop-up">
+          <div
+            class="thumbnail-1-pop-up slider"
+            onclick="changeIt('images/image-product-1.jpg')"
+          >
+            <img src="images/image-product-1.jpg" alt="" />
+          </div>
+          <div
+            class="thumbnail-2-pop-up slider"
+            onclick="changeIt('images/image-product-2.jpg')"
+          >
+            <img src="images/image-product-2.jpg" alt="" />
+          </div>
+          <div
+            class="thumbnail-3-pop-up slider"
+            onclick="changeIt('images/image-product-3.jpg')"
+          >
+            <img src="images/image-product-3.jpg" alt="" />
+          </div>
+          <div
+            class="thumbnail-4-pop-up slider"
+            onclick="changeIt('images/image-product-4.jpg')"
+          >
+            <img src="images/image-product-4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("li").on("click", function () {
+          $(this).siblings().removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+    <script src="JS/dropdown.js"></script>
+    <script src="JS/slider.js"></script>
+    <script src="JS/addToCard.js"></script>
+  </body>
+</html>
